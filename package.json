@@ -14,8 +14,8 @@
     "clean": "lerna run clean --stream",
     "copy-build-files": "node scripts/copy-build-files.js",
     "publish": "lerna run publish-package --stream",
-    "version-testing": "lerna version --yes --conventional-commits --conventional-prerelease --preid alpha",
-    "version-acceptance": "lerna version --yes --conventional-commits --conventional-prerelease --preid beta",
+    "version-testing": "lerna version --yes --conventional-commits --conventional-prerelease --preid alpha --loglevel silly",
+    "version-acceptance": "lerna version --yes --conventional-commits --preid beta --loglevel silly",
     "version-production": "lerna version --yes --conventional-commits --conventional-graduate --create-release github --loglevel silly"
   },
   "dependencies": {
