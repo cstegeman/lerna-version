@@ -1,0 +1,22 @@
+{
+  "packages": ["packages/*"],
+  "version": "independent",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "command": {
+    "publish": {
+      "conventionalCommits": true,
+      "registry": "https://npm.pkg.github.com",
+      "ignoreChanges": [
+        "*.md",
+        "*.stories.{js|jsx|ts|tsx|mdx}",
+        "*.spec.{js|jsx|ts|tsx}",
+        "*.e2e.{js|jsx|ts|tsx}"
+      ]
+    },
+    "version": {
+      "allowBranch": ["main", "testing", "acceptance"],
+      "message": "chore(release): publish"
+    }
+  }
+}

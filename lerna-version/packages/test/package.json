@@ -1,0 +1,30 @@
+{
+  "name": "@cstegeman/test",
+  "version": "1.0.0",
+  "description": "Test",
+  "author": "test",
+  "homepage": "https://github.com/cstegeman/lerna-version/tree/main/packages/test#readme",
+  "license": "UNLICENSED",
+  "main": "dist/cjs/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cstegeman/lerna-version.git"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "NODE_ENV=production rollup -c --bundleConfigAsCjs",
+    "prebuild": "yarn run clean",
+    "publish-package": "../../scripts/publish.sh"
+  },
+  "bugs": {
+    "url": "https://github.com/cstegeman/lerna-version/issues"
+  },
+  "peerDependencies": {
+  }
+}

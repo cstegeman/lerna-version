@@ -1,0 +1,96 @@
+{
+  "name": "@cstegeman/lerna-version",
+  "version": "1.0.0",
+  "description": "The repository for design system components at Coolblue",
+  "author": "Test",
+  "homepage": "https://github.com/cstegeman/lerna-version#readme",
+  "license": "UNLICENSED",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "lerna run build --stream",
+    "clean": "lerna run clean --stream",
+    "copy-build-files": "node scripts/copy-build-files.js",
+    "publish": "lerna run publish-package --stream",
+    "version-testing": "lerna version --yes --conventional-commits --conventional-prerelease --preid alpha",
+    "version-acceptance": "lerna version --yes --conventional-commits --conventional-prerelease --preid beta",
+    "version-production": "lerna version --yes --conventional-commits --conventional-graduate --create-release github --loglevel silly"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/plugin-proposal-decorators": "^7.21.0",
+    "@babel/plugin-proposal-export-default-from": "^7.18.10",
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+    "@babel/plugin-transform-arrow-functions": "^7.21.5",
+    "@babel/plugin-transform-runtime": "^7.21.4",
+    "@babel/preset-env": "^7.21.5",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.21.5",
+    "@babel/types": "^7.21.5",
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
+    "@digitalroute/cz-conventional-changelog-for-jira": "^8.0.1",
+    "@mdx-js/rollup": "^2.3.0",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-eslint": "^9.0.4",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@rollup/plugin-typescript": "^11.1.1",
+
+    "babel-loader": "^9.1.2",
+    "commitizen": "^4.3.0",
+    "core-js": "^3.30.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "lerna": "^6.6.2",
+    "nx": "^16.2.2",
+    "postcss": "^8.4.23",
+    "postcss-styled-syntax": "^0.4.0",
+    "postcss-syntax": "^0.36.2",
+    "prettier": "^2.8.8",
+    "prompts": "^2.4.2",
+    "readline-sync": "^1.4.10",
+    "require-from-string": "^2.0.2",
+    "rollup": "^3.23.0",
+    "rollup-plugin-dts": "^5.3.0",
+    "rollup-plugin-filesize": "^10.0.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "rollup-plugin-url": "^3.0.1",
+    "rollup-plugin-visualizer": "^5.9.0",
+    "shelljs": "^0.8.5",
+    "ts-dedent": "^2.2.0",
+    "tslib": "^2.5.2",
+    "typescript": "^4.9.5",
+    "webpack": "^5.83.1"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/@digitalroute/cz-conventional-changelog-for-jira",
+      "jiraMode": true,
+      "skipScope": false,
+      "jiraPrefix": "DS",
+      "jiraLocation": "pre-description",
+      "jiraPrepend": "[",
+      "jiraAppend": "]",
+      "exclamationMark": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cstegeman/lerna-version.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cstegeman/lerna-version/issues"
+  }
+}
