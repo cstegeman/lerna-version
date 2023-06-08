@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0-beta.3](https://github.com/cstegeman/lerna-version/compare/@cstegeman/test@1.1.0-beta.2...@cstegeman/test@1.1.0-beta.3) (2023-06-08)
+
+### Features
+
+- add console ([7244d0d](https://github.com/cstegeman/lerna-version/commit/7244d0dc46c18c6e60553e779ead21c67f2e4915))
+
 # [1.1.0-beta.2](https://github.com/cstegeman/lerna-version/compare/@cstegeman/test@1.1.0-beta.1...@cstegeman/test@1.1.0-beta.2) (2023-06-07)
 
 ### Features
