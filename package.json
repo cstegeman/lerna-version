@@ -19,6 +19,7 @@
     "version-production": "lerna version --yes --conventional-commits --conventional-graduate --create-release github --loglevel silly"
   },
   "dependencies": {
+    "octokit": "^2.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.21.8",
@@ -41,7 +42,6 @@
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@rollup/plugin-terser": "^0.4.3",
     "@rollup/plugin-typescript": "^11.1.1",
-
     "babel-loader": "^9.1.2",
     "commitizen": "^4.3.0",
     "core-js": "^3.30.2",
