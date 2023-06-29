@@ -8,9 +8,9 @@ const octokit = new Octokit({
 });
 
 const args = process.argv;
-const org = 'coolblue-development';
+const org = 'cstegeman';
 const packageType = 'npm';
-const repo = 'test';
+const repo = 'lerna-version';
 const packageArg = args.find(arg => arg.startsWith('--packages='));
 
 let packages = null;
@@ -47,15 +47,14 @@ function deletePackages() {
       return { id, packageName, tagName, name };
     });
 
-    deletePackageVersions(versions);
-    deleteReleaseVersions(versions)
+    // deletePackageVersions(versions);
+    // deleteReleaseVersions(versions)
     deleteTagVersions(versions)
   });
 
   function deletePackageVersions(versions) {
     console.log(versions)
 
-    return;
     const deletePackagesRequests = versions.map(({ id, packageName }) => {
       return octokit.request(`DELETE /user/packages/${packageType}/${packageName}/versions/${id}`, {
         headers: {
@@ -90,7 +89,6 @@ function deleteReleaseVersions(versions) {
   function deleteRelease(id, tagName) {
     console.log('deleteRelease', id, tagName);
 
-    return;
     octokit.request(`DELETE /repos/${org}/${repo}/releases/${id}`, {
       headers: {
         'X-GitHub-Api-Version': '2022-11-28'
@@ -108,7 +106,6 @@ function deleteTagVersions(versions) {
   versions.forEach(({ name }) => {
     console.log('deleteTagVersions', name);
 
-    return;
     octokit.request(`DELETE /repos/${org}/${repo}/git/refs/tags/${name}`, {
       headers: {
         'X-GitHub-Api-Version': '2022-11-28'
