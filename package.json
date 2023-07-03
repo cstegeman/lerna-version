@@ -16,7 +16,7 @@
     "publish": "lerna run publish-package --stream",
     "version-testing": "lerna version --yes --conventional-commits --conventional-prerelease --preid alpha",
     "version-acceptance": "lerna version --yes --conventional-commits --conventional-prerelease --preid beta",
-    "version-production": "lerna version --yes --conventional-commits --conventional-graduate --create-release github --loglevel silly"
+    "version-production": "lerna version --yes --conventional-commits --conventional-graduate --create-release github --loglevel silly --force-publish"
   },
   "dependencies": {
     "octokit": "^2.1.0"
