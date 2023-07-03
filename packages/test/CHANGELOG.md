@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/cstegeman/lerna-version/compare/@cstegeman/test@1.1.0...@cstegeman/test@1.2.0) (2023-07-03)
+
+### Features
+
+- remove console statement ([1ace8af](https://github.com/cstegeman/lerna-version/commit/1ace8afd4163274a48d4c123ff149990328082f8))
+
 # 1.1.0 (2023-06-29)
 
 ### Features
